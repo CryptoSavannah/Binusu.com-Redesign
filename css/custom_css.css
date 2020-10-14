@@ -180,6 +180,34 @@ table img {
     background-color: rgba(12, 43, 75, 0.9);
 }
 
+#payment {
+    background-color: white;
+}
+
+.payment_container {
+    /* height: 300px; */
+    background-color: #fafafa;
+    width: 100%;
+    border-radius: 60px;
+}
+
+#payment_container {
+    /* height: 300px; */
+    background-color: #fafafa;
+    width: 100%;
+    border-radius: 60px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#payment_container h5 {
+    color: orange;
+}
+
+#payment_container p {
+    color: grey;
+}
+
 .timeline {
     position: relative;
     max-width: 1200px;
@@ -187,7 +215,7 @@ table img {
 }
 
 .timeline h3 {
-    color: #FF9F55;
+    color: orange /*#FF9F55;*/
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -222,7 +250,7 @@ table img {
     height: 25px;
     right: -12px;
     background-color: white;
-    border: 4px solid #FF9F55;
+    border: 4px solid orange; /*#fdb813  #FF9F55*/
     top: 15px;
     border-radius: 50%;
     z-index: 1;
