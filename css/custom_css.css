@@ -6,14 +6,15 @@
 } */
 
 #row_1 {
-    background-color: rgba(67, 72, 76, 0.6);
+    /* background-color: rgba(67, 72, 76, 0.6); */
     height: 680px;
     /* 100%;*/
     /* opacity: 0.2; */
-    border-radius: 31px;
+    border-radius: 5px;
     text-align: center;
-    /* color: white; */
+    color: white;
     margin-top: 100px;
+    width: 75%;
 }
 
 #row_1 h2, #row_1 p {
@@ -193,9 +194,9 @@ table img {
 
 #payment_container {
     /* height: 300px; */
-    background-color: #fafafa;
+    background-color: white;
     width: 100%;
-    border-radius: 60px;
+    /* border-radius: 60px; */
     text-align: center;
     padding-top: 30px;
 }
@@ -311,7 +312,7 @@ table img {
 .content {
     padding: 20px 30px;
     /* background-color: white; */
-    background-color: azure;
+    background-color:  #f6f6f6;
     position: relative;
     border-radius: 6px;
 }
