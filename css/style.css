@@ -345,7 +345,8 @@ img {
 	left: 0;
 	top: 0;
 	width: 100%; */
-	background: #43484c;
+	/* background: #43484c; */
+	background-color: #0c2b4b;
     position: absolute;
     left: 0;
     top: 0;
@@ -853,10 +854,10 @@ img {
 }
 
 .pricing__item {
-	background: rgba(12, 43, 75, 0.3);
+	/* background: rgba(12, 43, 75, 0.3); */
 	text-align: center;
-	padding: 40px 35px 35px;
-	margin-bottom: 40px;
+	/* padding: 40px 35px 35px;*/
+	margin-bottom: 35px; 
 	-webkit-transition: all, 0.5s;
 	-o-transition: all, 0.5s;
 	transition: all, 0.5s;
@@ -876,8 +877,8 @@ img {
 
 .pricing__item .pricing__item__title {
 	border-bottom: 1px solid rgba(225, 225, 225, 0.2);
-	padding-bottom: 45px;
-	margin-bottom: 25px;
+	padding-bottom: 9px; /* 45px;*/
+	margin-bottom: 8px; /*25px;*/
 	-webkit-transition: all, 0.3s;
 	-o-transition: all, 0.3s;
 	transition: all, 0.3s;
