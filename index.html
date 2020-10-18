@@ -12,6 +12,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -23,9 +24,13 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/custom_css.css">
+
+    <link rel="stylesheet" href="odometer-theme-car.css" />
+    <script src="js/odometer.js"></script>
+
 </head>
 
-<body>
+<body onscroll="here();">
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -84,8 +89,8 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./courses.html">Courses</a></li>
-                            <li><a href="#">Pages</a>
+                            <!-- <li><a href="./courses.html">Courses</a></li> -->
+                            <li><a href="#">Important Links</a>
                                 <ul class="dropdown">
                                     <li><a href="./about.html">About</a></li>
                                     <li><a href="./instructor.html">Instructor</a></li>
@@ -95,8 +100,8 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog.html">News</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <!-- <li><a href="./blog.html">News</a></li>
+                            <li><a href="./contact.html">Contact</a></li> -->
                         </ul>
                     </nav>
                 </div>
@@ -112,7 +117,7 @@
                             <a href="#"><i class="fa fa-dribbble"></i></a>
                         </div>
                         <div class="header__right__btn">
-                            <a href="#" class="primary-btn">Get Started</a>
+                            <a href="#" class="primary-btn">Get Trading</a>
                         </div>
                     </div>
                 </div>
@@ -128,8 +133,9 @@
     <section class="hero set-bg" data-setbg="img/bg-4.jpg" id="bg-1">
         <div class="container" id="row_1">
             <!-- <div class="row" > -->
-            <div class="row">
-                <div class="col-lg-3">
+            <div class="row"
+                style="height: 36%; background-color: rgba(12, 43, 75, 24%); border-radius: 30px; margin-bottom: 70px;">
+                <div class="col-lg-2">
                     <div class="pricing__item">
                         <div class="pricing__item__title">
                             <img src="img/btc.png" alt="">
@@ -137,8 +143,8 @@
                         <span>Bitcoin (BTC)</span>
                     </div>
                 </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-3">
+                <!-- <div class="col-lg-1"></div> -->
+                <div class="col-lg-2">
                     <div class="pricing__item">
                         <div class="pricing__item__title">
 
@@ -148,8 +154,8 @@
                         <span>Ethereum (ETH)</span>
                     </div>
                 </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-3">
+                <!-- <div class="col-lg-1"></div> -->
+                <div class="col-lg-2">
                     <div class="pricing__item">
                         <div class="pricing__item__title">
 
@@ -159,29 +165,7 @@
                         <span>Litecoin (LTC)</span>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="pricing__item">
-                        <div class="pricing__item__title">
-                            <img src="img/celo.png" alt="" style="max-width: 292px;">
-                        </div>
-                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
-                        <span>Celo (CELO)</span>
-                    </div>
-                </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-3">
-                    <div class="pricing__item">
-                        <div class="pricing__item__title">
-                            <img src="img/ripple.png" alt="">
-                        </div>
-                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
-                        <span>Ripple (XRP)</span>
-                    </div>
-                </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-3">
+                <div class="col-lg-2">
                     <div class="pricing__item">
                         <div class="pricing__item__title">
                             <img src="img/BCH.png" alt="">
@@ -190,16 +174,92 @@
                         <span>Bitcoin Cash (BCH)</span>
                     </div>
                 </div>
+                <div class="col-lg-2">
+                    <div class="pricing__item">
+                        <div class="pricing__item__title">
+                            <img src="img/celogo.png" alt="">
+                        </div>
+                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
+                        <span>Celo (CELO)</span>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="pricing__item">
+                        <div class="pricing__item__title">
+                            <img src="img/ripple.png" alt="">
+                        </div>
+                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
+                        <span>Ripple (XRP)</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="count"> 800 </div>
+                    </div>
+
+                    <!-- <div class="pricing__item">
+                        <div class="pricing__item__title">
+                            <img src="img/celo.png" alt="" style="max-width: 292px;">
+                        </div>
+                        <span>Celo (CELO)</span>
+                    </div> -->
+                </div>
+                <!-- <div class="col-lg-1"></div> -->
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="count" id="value">123000</div>
+
+                    </div>
+
+                    <!-- <div class="pricing__item">
+                        <div class="pricing__item__title">
+                            <img src="img/ripple.png" alt="">
+                        </div>
+                        <span>Ripple (XRP)</span>
+                    </div> -->
+                </div>
+                <!-- <div class="col-lg-1"></div> -->
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="count" id="centage">90</div>
+                    </div>
+
+                    <!-- <div class="pricing__item">
+                        <div class="pricing__item__title">
+                            <img src="img/BCH.png" alt="">
+                        </div>
+                        <span>Bitcoin Cash (BCH)</span>
+                    </div> -->
+                </div>
+                <div class="col-lg-1"></div>
             </div>
             <div class="row" style="margin-top: 60px;">
                 <div class="col-lg-12">
                     <button style="    padding: 11px 0;
-                    width: 38%;
+                    width: 42%;
                     border-radius: 21px;
                     background-color: #0c2b4b;
-                    color: white;">Get Started</button>
+                    color: white; border: none;" id="getStarted" onclick="openNav2()">Get Trading</button>
                 </div>
             </div>
+            <div class="row" style="margin-top: 60px;">
+                <div class="col-lg-12">
+                    <button style="    padding: 2px 0;
+                    width: 9%;
+                    border-radius: 14px;
+                    background-color: white;
+                    color: #0c2b4b; border: none;" onclick="openNav2()">Login</button>
+                    <button style="    padding: 2px 0;
+                    width: 9%;
+                    border-radius: 14px;
+                    background-color: white;
+                    color: #0c2b4b; border: none;" onclick="openNav()">Sign up</button>
+                </div>
+            </div>
+
             <!-- <div class="col-lg-6">
                     <h2>Binusu.com</h2>
                     <p>
@@ -259,6 +319,110 @@
                 </div> -->
             <!-- </div> -->
         </div>
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-chevron-left"
+                    aria-hidden="true"></i></a>
+            <div class="overlay-content">
+                <img src="img/binusulogo.png" alt="" style="padding-top: 19px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="uname">Username</label>
+                            <input type="text" name="uname" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="psw">Password</label>
+                            <input type="password" name="psw" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="psw-repeat">Repeat Password</label>
+                            <input type="password" name="psw-repeat" required>
+                        </div>
+
+                    </div>
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn" id="button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content2">
+                Already have an account? <button id="loginbtn" onclick="closeOpen2();">Login</button> instead.
+            </div>
+        </div>
+
+        <div id="myNav2" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()"><i class="fa fa-chevron-left"
+                    aria-hidden="true"></i></a>
+            <div class="overlay-content" style="height: 72%; width: 32%;">
+                <img src="img/binusulogo.png" alt="" style="padding-top: 19px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label for="uname" style="float: left;">Username</label>
+                            <input type="text" name="uname" required>
+                        </div>
+                        <!-- <div class="col-lg-6">
+                            <label for="psw">Password</label>
+                            <input type="password" name="psw" required>
+                        </div> -->
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label for="psw" style="float: left;">Password</label>
+                            <input type="password" name="psw" required>
+                        </div>
+
+
+                    </div>
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn" id="button">Login</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content2">
+                No account yet? <button id="loginbtn" onclick="closeOpen();">Create one!</button>
+            </div>
+        </div>
+        <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <form class="modal-content" action="#">
+                <div class="container">
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw">Password</label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat">Repeat Password</label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.
+                    </p>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div> -->
     </section>
     <!-- Hero Section End -->
     <section class="about-video">
@@ -311,7 +475,7 @@
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td><img src="img/binusulogo.png" alt=""> Binusu (BNS)</td>
+                                <td><img src="img/logo.png" alt=""> Binusu (BNS)</td>
                                 <td>6.5</td>
                                 <td style="color: RED;">-0.1</td>
                                 <td><button>Buy</button></td>
@@ -461,20 +625,31 @@
                 <div class="col-lg-8 col-md-8">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="feature__item">
+                            <div class="feature__item" style="height: 200px;">
                                 <!-- <img src="img/feature/feature-1.png" alt=""> -->
                                 <i class="fa fa-lock" aria-hidden="true"></i>
                                 <h5>Secure Transactions</h5>
+                                <div class="overlay1">
+                                    <div class="text">Cryptographically protected..</div>
+                                </div>
+
                             </div>
-                            <div class="feature__item">
-                                <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+                            <div class="feature__item" style="height: 200px;">
+                                <i class="fa fa-fighter-jet" aria-hidden="true" id="fi2"></i>
                                 <h5>Quick & Safe Exchange</h5>
+                                <div class="overlay1">
+                                    <div class="text">Some info about the quick and safe exchanges</div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="feature__item right-column">
+                            <div class="feature__item right-column" style="height: 200px;">
+                                <div class="overlay1" style="margin-top: inherit;">
+                                    <div class="text">Mining etc</div>
+                                </div>
                                 <i class="fa fa-handshake-o" aria-hidden="true"></i>
                                 <h5>Trusted Platform</h5>
+
                             </div>
                         </div>
                     </div>
@@ -496,31 +671,31 @@
             <div class="row">
 
                 <div class="timeline">
-                    <div class="container_ left">
+                    <div class="container_ left hidden">
                         <div class="content">
                             <h3>WALLET</h3>
                             <p>Do one thing like setting up a bitcoin wallet</p>
                         </div>
                     </div>
-                    <div class="container_ right">
+                    <div class="container_ right hidden">
                         <div class="content">
                             <h3>BUY</h3>
                             <p>And another like buying some bitcoins with tangible currency</p>
                         </div>
                     </div>
-                    <div class="container_ left">
+                    <div class="container_ left hidden">
                         <div class="content">
                             <h3>Exchange</h3>
                             <p>And another like exchanging these bitcoins</p>
                         </div>
                     </div>
-                    <div class="container_ right">
+                    <div class="container_ right hidden">
                         <div class="content">
                             <h3>4</h3>
                             <p>And another</p>
                         </div>
                     </div>
-                    <div class="container_ left">
+                    <div class="container_ left hidden">
                         <div class="content">
                             <h3>5</h3>
                             <p>And another one</p>
@@ -561,7 +736,7 @@
                             <img src="img/logo.png" alt="" style="width: 93px;">
                         </div>
                         <div class="col-lg-6">
-                            <p style="padding-top: 7%;">Binusu agents.....
+                            <p style="padding-top: 7%;" class="css-typing">Binusu agents.....
                                 <br>
                                 dial ..
 
@@ -575,7 +750,7 @@
                             <img src="img/mtnMoney.jpeg" alt="" style="border-radius: 13%; width: 100px;">
                         </div>
                         <div class="col-lg-6">
-                            <p style="padding-top: 7%;">mtn mobile money...</p>
+                            <p style="padding-top: 7%;" class="css-typing">mtn mobile money...</p>
                         </div>
                     </div>
                     <div class="row" style="width: 74%; margin: 70px auto;">
@@ -584,7 +759,7 @@
 
                         </div>
                         <div class="col-lg-6">
-                            <p style="padding-top: 7%;">airtel money..</p>
+                            <p style="padding-top: 7%;" class="css-typing">airtel money..</p>
 
                         </div>
                     </div>
@@ -666,7 +841,7 @@
     <!-- Application Form Section End -->
 
     <!-- Pricing Section Begin -->
-    <section class="pricing spad set-bg" data-setbg="img/bg-5.jpg">
+    <!-- <section class="pricing spad set-bg" data-setbg="img/bg-5.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -679,58 +854,40 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="pricing__item">
-                        <div class="pricing__item__title">
-                            <!-- <span>20% off</span>
+                        <div class="pricing__item__title"> -->
+    <!-- <span>20% off</span>
                             <h2>$ 199</h2>
                             <h5>Personal Driving</h5> -->
-                            <img src="img/btc.png" alt="">
-                        </div>
-                        <!-- <ul>
+    <!-- <img src="img/btc.png" alt="">
+                        </div> -->
+    <!-- <ul>
                             <li>Full course theory</li>
                             <li>Full driving course</li>
                             <li>Training in first aid</li>
                             <li>Practical sessions</li>
                             <li>Psychological support</li>
                         </ul> -->
-                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
-                        <span>Bitcoin (BTC)</span>
+    <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
+    <!-- <span>Bitcoin (BTC)</span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="pricing__item">
                         <div class="pricing__item__title">
-                            <!-- <span>20% off</span>
-                            <h2>$ 379</h2>
-                            <h5>Power Booster</h5> -->
+                   
                             <img src="img/eth-logo.png" alt="">
                         </div>
-                        <!-- <ul>
-                            <li>Full course theory</li>
-                            <li>Full driving course</li>
-                            <li>Training in first aid</li>
-                            <li>Practical sessions</li>
-                            <li>Psychological support</li>
-                        </ul> -->
-                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
+          
                         <span>Ethereum (ETH)</span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="pricing__item">
                         <div class="pricing__item__title">
-                            <!-- <span>20% off</span>
-                            <h2>$ 259</h2>
-                            <h5>Freight Driving</h5> -->
+        
                             <img src="img/ltc.png" alt="">
                         </div>
-                        <!-- <ul>
-                            <li>Full course theory</li>
-                            <li>Full driving course</li>
-                            <li>Training in first aid</li>
-                            <li>Practical sessions</li>
-                            <li>Psychological support</li>
-                        </ul> -->
-                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
+  
                         <span>Litecoin (LTC)</span>
                     </div>
                 </div>
@@ -742,7 +899,6 @@
                         <div class="pricing__item__title">
                             <img src="img/celo.png" alt="" style="max-width: 292px;">
                         </div>
-                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
                         <span>Celo (CELO)</span>
                     </div>
                 </div>
@@ -751,7 +907,6 @@
                         <div class="pricing__item__title">
                             <img src="img/ripple.png" alt="">
                         </div>
-                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
                         <span>Ripple (XRP)</span>
                     </div>
                 </div>
@@ -760,13 +915,12 @@
                         <div class="pricing__item__title">
                             <img src="img/BCH.png" alt="">
                         </div>
-                        <!-- <a href="#" class="primary-btn second-bg">get Started</a> -->
                         <span>Bitcoin Cash (BCH)</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Pricing Section End -->
 
     <!-- Team Section Begin -->
@@ -972,6 +1126,11 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
+    <!-- <script>
+        if (document.body.scrollTop < 2) {
+            document.querySelector(".header").style.backgroundColor = 'pink';
+        };
+    </script> -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
@@ -981,6 +1140,19 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    </script>
     <script>
         function openCity(evt, cityName) {
 
@@ -1000,6 +1172,106 @@
     <script>
         document.getElementById("defaultOpen").click();
     </script>
+    <script>
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function signup() {
+            document.getElementById('id01').style.display = 'block';
+        }
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+            document.querySelector("body").style.overflowY = 'hidden';
+        }
+
+        function openNav2() {
+            document.getElementById("myNav2").style.width = "100%";
+            document.querySelector("body").style.overflowY = 'hidden';
+            // document.querySelector("body").style.height = '100vh';
+            // document.querySelector("body").style.paddingRight= '15px';
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+            document.querySelector("body").style.overflowY = 'auto';
+        }
+
+        function closeNav2() {
+            document.getElementById("myNav2").style.width = "0%";
+            document.querySelector("body").style.overflowY = 'auto';
+            // document.querySelector("body").style.height = '100vh';
+            // document.querySelector("body").style.paddingRight= '15px';
+        }
+
+        function closeOpen() {
+            document.getElementById("myNav2").style.width = "0%";
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeOpen2() {
+            document.getElementById("myNav").style.width = "0%";
+            document.getElementById("myNav2").style.width = "100%";
+        }
+        // function openNav() {
+        //     document.getElementById("myNav").style.height = "100%";
+        // }
+
+        // /* Close */
+        // function closeNav() {
+        //     document.getElementById("myNav").style.height = "0%";
+        // }
+
+    </script>
+    <script>
+        function here() {
+            document.querySelector(".header").style.backgroundColor = '#0c2b4b';
+        }
+    </script>
+    <script>
+        (function () {
+            var elements;
+            var windowHeight;
+
+            function init() {
+                elements = document.querySelectorAll('.hidden');
+                windowHeight = window.innerHeight;
+            }
+
+            function checkPosition() {
+                for (var i = 0; i < elements.length; i++) {
+                    var element = elements[i];
+                    var positionFromTop = elements[i].getBoundingClientRect().top;
+
+                    if (positionFromTop - windowHeight <= 0) {
+                        elements[0].classList.add('animate__animated', 'animate__pulse', 'animate__delay-1s', 'animate__slow');
+                        elements[0].classList.remove('hidden');
+                        elements[1].classList.add('animate__animated', 'animate__pulse', 'animate__delay-2s', 'animate__slow');
+                        elements[1].classList.remove('hidden');
+                        elements[2].classList.add('animate__animated', 'animate__pulse', 'animate__delay-3s', 'animate__slow');
+                        elements[2].classList.remove('hidden');
+                        elements[3].classList.add('animate__animated', 'animate__pulse', 'animate__delay-4s', 'animate__slow');
+                        elements[3].classList.remove('hidden');
+                        elements[4].classList.add('animate__animated', 'animate__pulse', 'animate__delay-5s', 'animate__slow');
+                        elements[4].classList.remove('hidden');
+                    }
+                }
+            }
+
+            window.addEventListener('scroll', checkPosition);
+            window.addEventListener('resize', init);
+
+            init();
+            checkPosition();
+        })();
+    </script>
+
 </body>
 
 </html>

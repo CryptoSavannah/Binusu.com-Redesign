@@ -5,6 +5,340 @@
     border-radius: 31px;
 } */
 
+/* @property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.trial {
+    animation: counter 5s infinite alternate ease-in-out;
+    counter-reset: num var(--num);
+  
+} */
+.css-typing {
+    width: 200px;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 2s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+
+@keyframes type {
+    from { width: 0; }
+}
+
+@-webkit-keyframes type {
+    from { width: 0; }
+}
+
+:root {
+    --animate-delay: 2s;
+  }
+
+.hidden {
+    opacity: 0;
+  }
+
+.overlay1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: inherit;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(12, 43, 75, 98%);
+  }
+  
+  .feature__item:hover .overlay1 {
+    opacity: 1;
+    
+  }
+  
+  .overlay1 .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    content: "haha";
+  }
+
+.count::after {
+    content: " Traders";
+}
+
+#centage::after {
+    content: "% Returns";
+}
+
+#value::before {
+    content: "$";
+}
+
+#value::after {
+    content: " Value";
+}
+/* @keyframes counter {
+    from {
+        --num: 0;
+    }
+    to {
+        --num: 800;
+    }
+} */
+
+#getStarted:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+.overlay label {
+    color: orange;
+    font-size: 15px;
+}
+
+.overlay input[type=text], .overlay input[type=password] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 35px 0;
+    display: inline-block;
+    border: none;
+    background: #04213d;
+}
+
+.overlay #loginbtn {
+    background-color: inherit;
+    border: none;
+    color: orange;
+}
+
+.overlay input[type=text]:focus, .overlay input[type=password]:focus {
+    background-color: #04213d;
+    outline: none;
+    border: 1px solid orange;
+}
+
+.overlay #button {
+    background-color: #0c2b4b;
+    color: white;
+    padding: 8px 0;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+    border: 1px solid orange;
+}
+
+.overlay #button:hover {
+    opacity: 1;
+}
+
+.overlay .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+.overlay .cancelbtn, .overlay .signupbtn {
+    /* float: left; */
+    width: 50%;
+}
+
+.overlay .container {
+    padding: 60px;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    /* background-color: rgb(0, 0, 0); */
+    background-color: #04213d;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    /* z-index: 10; */
+    position: relative;
+    /* top: 25%; */
+    /* width: 100%; */
+    text-align: center;
+    /* margin-top: 30px; */
+    background-color: #0c2b4b;
+    margin: 5% auto 3% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    /* border: 1px solid #888; */
+    width: 40%;
+    color: white;
+    height: 70%;
+}
+
+.overlay .content2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.modal input[type=text], .modal input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.modal input[type=text]:focus, .modal input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.modal button:hover {
+    opacity: 1;
+}
+
+.modal .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+.modal .cancelbtn, .modal .signupbtn {
+    float: left;
+    width: 50%;
+}
+
+.modal .container {
+    padding: 16px;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* min-width: 100%;
+    margin: 0; */
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* min-height: 100vh; */
+    /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+
+.overlay hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+
+.modal .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.modal .close:hover, .modal .close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+
+.modal .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.info {
+    padding: 25px 20px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.493);
+    color: rgba(12, 43, 75);
+    font-size: 30px;
+    font-weight: 700;
+}
+
 #row_1 {
     /* background-color: rgba(67, 72, 76, 0.6); */
     height: 680px;
@@ -49,7 +383,7 @@
     width: 70%;
 }
 
-input[type=text], input[type=password] {
+/* input[type=text], input[type=password] {
     width: 90%;
     padding: 5px 20px;
     margin: 8px 0;
@@ -57,7 +391,7 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     border-radius: 9px;
     box-sizing: border-box;
-}
+} */
 
 .imgcontainer {
     text-align: center;
@@ -312,7 +646,7 @@ table img {
 .content {
     padding: 20px 30px;
     /* background-color: white; */
-    background-color:  #f6f6f6;
+    background-color: #f6f6f6;
     position: relative;
     border-radius: 6px;
 }
